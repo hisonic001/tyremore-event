@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>테슬라 오너 최대 10만원 상품권 — 타이어모어 × TKC</title>
+<meta property="og:title" content="테슬라 오너라면 최대 10만원 상품권">
+<meta property="og:description" content="미쉐린 타이어 4본 구매 + 멤버십 정품등록 시 상품권 5만원+5만원 중복 증정. ~8/31, 전국 타이어모어 참여 매장 35곳">
+<meta property="og:image" content="https://hisonic001.github.io/tyremore-event/assets/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛞</text></svg>">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+  :root {
+    --bg: #F3F6F3;
+    --surface: #FFFFFF;
+    --ink: #14171C;
+    --muted: #5C6660;
+    --line: #DFE6E0;
+    --green-deep: #0E4A30;
+    --green-deep-2: #08331F;
+    --green: #00A651;
+    --blue: #27509B;
+    --yellow: #FFD400;
+    --yellow-ink: #6B5800;
+    --on-dark: #FFFFFF;
+    --on-dark-muted: #A9C4B3;
+    --card-shadow: 0 2px 10px rgba(14, 74, 48, .07);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101512;
+      --surface: #1A211C;
+      --ink: #E9EEEA;
+      --muted: #9AA69E;
+      --line: #2A342D;
+      --card-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: 'Pretendard Variable', Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+    line-height: 1.6; letter-spacing: -0.01em; word-break: keep-all;
+    padding-bottom: 84px; /* 하단 고정 CTA 공간 */
+  }
+  .col { max-width: 560px; margin: 0 auto; padding: 0 18px; }
+  a { color: inherit; text-decoration: none; }
+  button { font: inherit; border: 0; background: none; cursor: pointer; color: inherit; }
+
+  /* ── 히어로 ── */
+  .hero { background: linear-gradient(160deg, var(--green-deep) 0%, var(--green-deep-2) 90%); color: var(--on-dark); overflow: hidden; }
+  .hero .col { position: relative; padding-top: 34px; padding-bottom: 30px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(255,255,255,.12);
+    border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 4px 13px;
+    font-size: 12.5px; font-weight: 700; letter-spacing: .02em; }
+  .hero-badge b { color: var(--yellow); }
+  .hero h1 { font-size: clamp(29px, 7.6vw, 38px); font-weight: 900; letter-spacing: -0.04em;
+    line-height: 1.18; margin: 14px 0 6px; text-wrap: balance; }
+  .hero h1 .won { color: var(--yellow); }
+  .hero .eligible { font-size: 15px; font-weight: 600; color: var(--on-dark-muted); }
+  .hero .eligible b { color: #fff; border-bottom: 2px solid var(--yellow); padding-bottom: 1px; }
+  .hero .bib { position: absolute; right: 4px; bottom: -6px; height: 118px; max-width: 34%; object-fit: contain; opacity: .95;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,.4)); pointer-events: none; }
+  @media (max-width: 420px) { .hero .bib { height: 92px; right: -6px; } }
+
+  .count-row { display: flex; align-items: center; gap: 10px; margin: 18px 0 20px; flex-wrap: wrap; }
+  .dday { background: var(--yellow); color: #14171C; font-weight: 900; font-size: 17px;
+    padding: 5px 14px; border-radius: 8px; font-variant-numeric: tabular-nums; }
+  .clock { font-size: 14px; font-weight: 700; color: var(--on-dark-muted); font-variant-numeric: tabular-nums; }
+  .clock b { color: #fff; }
+
+  .cta-main { display: block; position: relative; z-index: 1; text-align: center; background: var(--yellow); color: #14171C;
+    font-size: 18px; font-weight: 900; letter-spacing: -0.02em; padding: 15px;
+    border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.3); width: min(100%, 340px); }
+  .cta-main:active { transform: translateY(1px); }
+
+  /* ── 섹션 공통 ── */
+  section { padding: 34px 0 6px; }
+  .sec-label { font-size: 12px; font-weight: 800; letter-spacing: .14em; color: var(--green); text-transform: uppercase; }
+  h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; margin: 4px 0 16px; text-wrap: balance; }
+
+  /* ── 밸류 스택 ── */
+  .stack-card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
+    box-shadow: var(--card-shadow); padding: 22px 20px; }
+  .stack-pair { display: flex; align-items: stretch; gap: 8px; }
+  .stack-pair .half { flex: 1; border-radius: 12px; padding: 12px 8px; text-align: center; }
+  .half.more { background: rgba(0,166,81,.1); border: 1.5px solid var(--green); }
+  .half.ev { background: rgba(39,80,155,.1); border: 1.5px solid var(--blue); }
+  .half .src { font-size: 12px; font-weight: 700; }
+  .half.more .src { color: var(--green); }
+  .half.ev .src { color: var(--blue); }
+  .half .amt { font-size: 24px; font-weight: 900; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+  .stack-plus { align-self: center; font-size: 20px; font-weight: 900; color: var(--muted); }
+  .stack-total { text-align: center; margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--line); }
+  .stack-total .label { font-size: 13.5px; font-weight: 700; color: var(--muted); }
+  .stack-total .total { font-size: 40px; font-weight: 900; letter-spacing: -0.04em; line-height: 1.15; font-variant-numeric: tabular-nums; }
+  .stack-total .total em { font-style: normal; color: var(--green); }
+  .stack-total .cond { font-size: 13px; font-weight: 600; color: var(--muted); margin-top: 4px; }
+  .extras { list-style: none; margin-top: 16px; display: flex; flex-direction: column; gap: 9px; }
+  .extras li { display: flex; gap: 9px; align-items: flex-start; font-size: 14.5px; font-weight: 600; }
+  .extras .p { flex: 0 0 auto; margin-top: 1px; width: 19px; height: 19px; border-radius: 50%;
+    background: var(--yellow); color: #14171C; font-size: 13px; font-weight: 900;
+    display: flex; align-items: center; justify-content: center; }
+  .extras li span b { color: var(--green); }
+  .ev-note { margin-top: 16px; font-size: 13px; color: var(--muted); line-height: 1.55; }
+
+  /* ── 참여 방법 ── */
+  .steps { display: flex; flex-direction: column; gap: 10px; }
+  .step { display: flex; gap: 13px; align-items: flex-start; background: var(--surface);
+    border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; box-shadow: var(--card-shadow); }
+  .step .n { flex: 0 0 auto; width: 26px; height: 26px; border-radius: 50%; background: var(--green-deep);
+    color: #fff; font-weight: 900; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+  .step .t { font-size: 15px; font-weight: 700; letter-spacing: -0.02em; }
+  .step .d { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+  /* ── 매장 찾기 ── */
+  .search { width: 100%; background: var(--surface); color: var(--ink); border: 1.5px solid var(--line);
+    border-radius: 10px; padding: 11px 14px; font: inherit; font-size: 15px; margin-bottom: 10px; }
+  .search:focus { outline: 2px solid var(--green); border-color: var(--green); }
+  .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 16px; }
+  .chip { border: 1.5px solid var(--line); background: var(--surface); border-radius: 999px;
+    padding: 6px 14px; font-size: 13.5px; font-weight: 700; color: var(--muted); }
+  .chip:focus-visible, .search:focus-visible, .cta-main:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+  .chip.on { background: var(--green-deep); border-color: var(--green-deep); color: #fff; }
+  .region-h { font-size: 14px; font-weight: 800; color: var(--muted); margin: 18px 0 8px; letter-spacing: .01em; }
+  .stores { display: flex; flex-direction: column; gap: 9px; }
+  .store { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 13px 15px; box-shadow: var(--card-shadow);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .store .nm { font-size: 16px; font-weight: 800; letter-spacing: -0.02em; }
+  .store .tel-no { font-size: 12.5px; color: var(--muted); font-weight: 600; font-variant-numeric: tabular-nums; }
+  .store .acts { display: flex; gap: 7px; }
+  .b { display: inline-flex; align-items: center; justify-content: center; border-radius: 9px;
+    font-size: 13.5px; font-weight: 800; padding: 9px 13px; min-height: 40px; letter-spacing: -0.02em; }
+  .b-tel { background: var(--green-deep); color: #fff; }
+  .b-map { background: var(--surface); border: 1.5px solid var(--blue); color: var(--blue); }
+  @media (prefers-color-scheme: dark) { .b-map { color: #8FB0E8; border-color: #8FB0E8; } }
+  .empty { color: var(--muted); font-size: 14px; padding: 18px 4px; }
+
+  /* ── FAQ / 유의사항 ── */
+  details { background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 0 16px; margin-bottom: 9px; box-shadow: var(--card-shadow); }
+  summary { cursor: pointer; font-size: 15px; font-weight: 700; padding: 14px 0; list-style: none;
+    display: flex; justify-content: space-between; align-items: center; gap: 10px; letter-spacing: -0.02em; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; font-size: 19px; font-weight: 700; color: var(--muted); flex: 0 0 auto; }
+  details[open] summary::after { content: '−'; }
+  details .body { padding: 0 0 15px; font-size: 14px; color: var(--muted); line-height: 1.65; }
+  details .body b { color: var(--ink); }
+  .notice-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .notice-list li { padding-left: 14px; position: relative; }
+  .notice-list li::before { content: ''; position: absolute; left: 0; top: .62em; width: 5px; height: 5px; border-radius: 50%; background: var(--green); }
+  .poster-img { width: 100%; height: auto; border-radius: 8px; margin-top: 10px; border: 1px solid var(--line); }
+
+  /* ── 푸터 ── */
+  footer { padding: 28px 0 40px; }
+  footer .col { font-size: 12.5px; color: var(--muted); line-height: 1.7; }
+
+  /* ── 하단 고정 CTA ── */
+  .fixbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+    background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px);
+    border-top: 1px solid var(--line); padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); }
+  .fixbar a { display: flex; align-items: center; justify-content: center; gap: 8px; max-width: 560px; margin: 0 auto;
+    background: var(--green-deep); color: #fff; font-size: 16px; font-weight: 900; letter-spacing: -0.02em;
+    padding: 13px; border-radius: 11px; }
+  .fixbar .d { color: var(--yellow); font-variant-numeric: tabular-nums; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="col">
+    <span class="hero-badge"><b>TKC</b> × 타이어모어 제휴 이벤트</span>
+    <h1>테슬라 오너라면<br>최대 <span class="won">10만원</span> 상품권</h1>
+    <p class="eligible">테슬라는 전 차종이 순수 전기차 — <b>카페 회원 모두 해당</b></p>
+    <div class="count-row">
+      <span class="dday" id="dday">D-15</span>
+      <span class="clock" id="clock">8월 31일(월)까지</span>
+    </div>
+    <a class="cta-main" href="#stores">가까운 매장 찾기</a>
+    <img class="bib" src="assets/bibendum.png" alt="">
+  </div>
+</header>
+
+<section>
+  <div class="col">
+    <div class="sec-label">Benefit</div>
+    <h2>두 프로모션이 겹치는 8월, 혜택은 합산됩니다</h2>
+    <div class="stack-card">
+      <div class="stack-pair">
+        <div class="half more">
+          <div class="src">타이어모어 여름 MORE</div>
+          <div class="amt">5만원</div>
+        </div>
+        <div class="stack-plus">+</div>
+        <div class="half ev">
+          <div class="src">미쉐린 전기차 혜택</div>
+          <div class="amt">5만원</div>
+        </div>
+      </div>
+      <div class="stack-total">
+        <div class="label">GS칼텍스 × 신세계 통합상품권</div>
+        <div class="total">최대 <em>10만원</em></div>
+        <div class="cond">미쉐린 타이어 4본 구매 + 멤버십 정품등록 시 · 차량 1대당 1회</div>
+      </div>
+      <ul class="extras">
+        <li><span class="p">+</span><span>TKC 제휴 매장 자체 혜택 — 미쉐린 타이어 <b>최대 30% 할인</b></span></li>
+        <li><span class="p">+</span><span>타이어 2본당 <b>데미지 프리 쿠폰</b> — 1년 또는 15,000km 이내 파손 시 적용</span></li>
+        <li><span class="p">+</span><span>위치 교환·펑크 수리·공기압 점검 <b>무료 케어 서비스</b> (구매 매장 방문 시)</span></li>
+        <li><span class="p">+</span><span>파일럿 스포츠 구매 시 <b>글로벌 서킷 행사 초청</b> 응모</span></li>
+      </ul>
+      <p class="ev-note">전기차는 차체가 무겁고 실내가 조용해 타이어 마모와 소음이 더 빨리 체감됩니다. 교체를 미루고 계셨다면 두 혜택이 겹치는 8월이 적기입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-label">How to</div>
+    <h2>참여 방법, 세 단계면 끝</h2>
+    <div class="steps">
+      <div class="step"><span class="n">1</span><div><div class="t">참여 매장 방문, 미쉐린 타이어 4본 장착</div><div class="d">방문 전 전화로 재고·가격 확인을 권장합니다</div></div></div>
+      <div class="step"><span class="n">2</span><div><div class="t">미쉐린 멤버십 앱에서 정품등록</div><div class="d">앱 다운로드 후 장착 타이어 등록 — 매장에서 도와드립니다</div></div></div>
+      <div class="step"><span class="n">3</span><div><div class="t">문자로 상품권 수령</div><div class="d">월~일 등록 완료 시 차주 수요일에 발송됩니다</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="stores">
+  <div class="col">
+    <div class="sec-label">Stores</div>
+    <h2>전국 참여 매장 35곳</h2>
+    <input class="search" id="q" type="search" placeholder="매장명 검색 (예: 속초, 강남)" aria-label="매장명 검색">
+    <div class="chips" id="chips" role="group" aria-label="지역 선택"></div>
+    <div id="list"></div>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-label">FAQ</div>
+    <h2>자주 묻는 질문</h2>
+    <details>
+      <summary>모델 3 / Y / S / X 전부 해당되나요?</summary>
+      <div class="body">네. 전기차 혜택 대상은 <b>순수 전기차</b>인데 테슬라는 전 차종이 해당됩니다. (하이브리드·플러그인하이브리드는 제외 대상이지만 테슬라와는 무관합니다)</div>
+    </details>
+    <details>
+      <summary>상품권은 언제, 어떻게 받나요?</summary>
+      <div class="body">미쉐린 멤버십 앱에서 <b>정품등록을 완료한 주의 차주 수요일</b>에 멤버십에 등록된 연락처로 문자 발송됩니다. 발송일이 휴일이면 다음 영업일에 발송됩니다.</div>
+    </details>
+    <details>
+      <summary>타이어 가격은 얼마인가요?</summary>
+      <div class="body">차종·규격·매장에 따라 다릅니다. 아래 매장 목록에서 가까운 매장에 전화하시면 <b>내 차 규격 기준 가격과 재고를 바로</b> 확인할 수 있습니다.</div>
+    </details>
+    <details>
+      <summary>두 이벤트 중복 지급이 확실한가요?</summary>
+      <div class="body">타이어모어 여름 MORE(5만원)와 미쉐린 전기차 혜택(5만원)은 <b>별개 프로모션이라 조건 충족 시 각각 지급</b>됩니다. 다만 중복 적용 여부는 매장 기준을 따르므로 방문 전 매장 확인을 권장합니다. 각 혜택은 차량 1대당 1회, 당일 일괄 구매 내역에 한합니다.</div>
+    </details>
+  </div>
+</section>
+
+<section>
+  <div class="col">
+    <div class="sec-label">Info</div>
+    <h2>유의사항 · 공식 안내</h2>
+    <details>
+      <summary>유의사항 전문 보기</summary>
+      <div class="body">
+        <ul class="notice-list">
+          <li>본 이벤트는 참여 매장의 자체 프로모션입니다.</li>
+          <li>안내된 참여 매장에 한해 혜택이 적용되므로, 방문 전 매장에 유선 문의를 권장합니다.</li>
+          <li>상품권 증정: 미쉐린타이어 4본 동시 교환 시 차량 1대당 1회 증정하며, 이벤트 기간 종료 후에는 혜택이 자동 종료됩니다.</li>
+          <li>데미지 프리 쿠폰: 구매 후 1년 또는 15,000km 이내 주행 중 발생한 타이어 파손 시 적용됩니다.</li>
+          <li>케어 서비스: 위치 교환, 펑크 수리, 공기압 점검 무료 서비스는 타이어를 구매·장착한 매장 방문 시에만 제공됩니다.</li>
+          <li>혜택 중복 및 변동: 타 프로모션과의 중복 적용 여부는 매장 기준에 따르며, 본 혜택은 사정에 따라 사전 고지 없이 변경될 수 있습니다.</li>
+        </ul>
+      </div>
+    </details>
+    <details>
+      <summary>타이어모어 공식 안내 페이지</summary>
+      <div class="body">
+        진행 중인 미쉐린 공식 프로모션 2건의 상세 안내입니다.<br><br>
+        <a href="https://www.tyremore.co.kr/ko/tidings/blog/2026summerpromotion?missingLocalisationCase=true" target="_blank" rel="noopener"><b>① 2026 여름 프로모션</b> — 상품권 5만원 + 데미지 프리 쿠폰 ↗</a><br>
+        <a href="https://www.tyremore.co.kr/ko/tidings/blog/michelin-ev-and-pilotsport-event?missingLocalisationCase=true" target="_blank" rel="noopener"><b>② 미쉐린 서머 프로모션</b> — 전기차 상품권 5만원 &amp; 서킷 초청 ↗</a><br><br>
+        미쉐린 최대 30% 할인과 무료 케어 서비스는 TKC 제휴 참여 매장의 자체 혜택입니다.
+      </div>
+    </details>
+    <details class="poster-box">
+      <summary>공식 프로모션 포스터 보기</summary>
+      <div class="body">
+        <img class="poster-img" data-src="assets/poster_more.png" alt="타이어모어 2026 여름 MORE 프로모션 포스터">
+        <img class="poster-img" data-src="assets/poster_michelin.png" alt="미쉐린 SUMMER EXPERIENCE 포스터">
+      </div>
+    </details>
+  </div>
+</section>
+
+<footer>
+  <div class="col">
+    이벤트 기간: 2026년 8월 31일(월)까지 · 전국 타이어모어 참여 매장 한정<br>
+    미쉐린 멤버십 고객센터 1899-9120<br>
+    본 페이지는 타이어모어 참여 매장 연합이 운영하는 이벤트 안내 페이지입니다.
+  </div>
+</footer>
+
+<div class="fixbar" id="fixbar">
+  <a href="#stores">가까운 매장 찾기 <span class="d" id="fixdday"></span></a>
+</div>
+
+<script src="stores.js"></script>
+<script>
+// ── 설정 ──────────────────────────────────────────────
+// GoatCounter(무료 방문 통계) 코드. https://www.goatcounter.com 가입 후
+// 사이트 코드를 아래에 넣으면 조회수·전화클릭·지도클릭이 집계됩니다. 비우면 통계 없이 동작.
+var GOATCOUNTER_CODE = "";
+var DEADLINE = new Date("2026-08-31T23:59:59+09:00");
+
+// ── 카운트다운 ────────────────────────────────────────
+function tick() {
+  var now = new Date(), ms = DEADLINE - now;
+  var dd = document.getElementById("dday"), ck = document.getElementById("clock"), fx = document.getElementById("fixdday");
+  if (ms <= 0) {
+    dd.textContent = "종료";
+    ck.textContent = "이벤트가 종료되었습니다";
+    fx.textContent = "";
+    return;
+  }
+  var d = Math.floor(ms / 864e5);
+  var h = Math.floor(ms % 864e5 / 36e5), m = Math.floor(ms % 36e5 / 6e4), s = Math.floor(ms % 6e4 / 1e3);
+  var p = function (n) { return String(n).padStart(2, "0"); };
+  dd.textContent = d > 0 ? "D-" + d : "오늘 마감";
+  ck.innerHTML = "마감까지 <b>" + (d > 0 ? d + "일 " : "") + p(h) + ":" + p(m) + ":" + p(s) + "</b>";
+  fx.textContent = d > 0 ? "D-" + d : "오늘 마감";
+  setTimeout(tick, 1000);
+}
+tick();
+
+// ── 매장 목록 렌더링 ──────────────────────────────────
+var REGIONS = ["전체"].concat(STORES.map(function (s) { return s.region; }).filter(function (r, i, a) { return a.indexOf(r) === i; }));
+var curRegion = "전체", curQuery = "";
+
+function mapUrl(s) {
+  return s.place || "https://map.naver.com/p/search/" + encodeURIComponent("타이어모어 " + s.name);
+}
+function track(ev, name) {
+  if (window.goatcounter && goatcounter.count) goatcounter.count({ path: ev + "-" + name, event: true });
+}
+function renderChips() {
+  var box = document.getElementById("chips");
+  box.innerHTML = "";
+  REGIONS.forEach(function (r) {
+    var b = document.createElement("button");
+    b.className = "chip" + (r === curRegion ? " on" : "");
+    b.textContent = r;
+    b.onclick = function () { curRegion = r; renderChips(); renderList(); };
+    box.appendChild(b);
+  });
+}
+function renderList() {
+  var box = document.getElementById("list");
+  box.innerHTML = "";
+  var q = curQuery.trim();
+  var shown = 0, region = "";
+  STORES.forEach(function (s) {
+    if (curRegion !== "전체" && s.region !== curRegion) return;
+    if (q && s.name.indexOf(q) === -1 && s.region.indexOf(q) === -1) return;
+    if (s.region !== region) {
+      region = s.region;
+      var h = document.createElement("div");
+      h.className = "region-h"; h.textContent = region;
+      box.appendChild(h);
+      var wrap = document.createElement("div");
+      wrap.className = "stores"; wrap.dataset.region = region;
+      box.appendChild(wrap);
+    }
+    var card = document.createElement("div");
+    card.className = "store";
+    card.innerHTML =
+      '<div><div class="nm">' + s.name + '</div><div class="tel-no">' + s.tel + '</div></div>' +
+      '<div class="acts">' +
+      '<a class="b b-tel" href="tel:' + s.tel + '">전화로 재고·가격 확인</a>' +
+      '<a class="b b-map" target="_blank" rel="noopener" href="' + mapUrl(s) + '">지도·예약</a></div>';
+    card.querySelector(".b-tel").addEventListener("click", function () { track("tel", s.name); });
+    card.querySelector(".b-map").addEventListener("click", function () { track("map", s.name); });
+    box.lastElementChild.appendChild(card);
+    shown++;
+  });
+  if (!shown) {
+    var e = document.createElement("div");
+    e.className = "empty"; e.textContent = '"' + q + '" 검색 결과가 없습니다. 매장명 일부(예: 속초)로 검색해 보세요.';
+    box.appendChild(e);
+  }
+}
+document.getElementById("q").addEventListener("input", function (e) { curQuery = e.target.value; renderList(); });
+renderChips();
+renderList();
+
+// ── 포스터 지연 로드 (접힘 열 때만 다운로드) ──────────
+document.querySelector(".poster-box").addEventListener("toggle", function (e) {
+  if (e.target.open) e.target.querySelectorAll("img[data-src]").forEach(function (img) {
+    img.src = img.dataset.src; img.removeAttribute("data-src");
+  });
+});
+
+// ── GoatCounter (설정 시에만 로드) ────────────────────
+if (GOATCOUNTER_CODE) {
+  var sc = document.createElement("script");
+  sc.async = true;
+  sc.src = "https://gc.zgo.at/count.js";
+  sc.dataset.goatcounter = "https://" + GOATCOUNTER_CODE + ".goatcounter.com/count";
+  document.body.appendChild(sc);
+}
+</script>
+</body>
+</html>
