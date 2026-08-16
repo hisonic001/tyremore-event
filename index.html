@@ -64,14 +64,11 @@
   .hero h1 .won { color: var(--yellow); }
   .hero .eligible { font-size: 15px; font-weight: 600; color: var(--on-dark-muted); }
   .hero .eligible b { color: #fff; border-bottom: 2px solid var(--yellow); padding-bottom: 1px; }
-  .hero .bib { position: absolute; right: 4px; bottom: -6px; height: 118px; max-width: 34%; object-fit: contain; opacity: .95;
+  /* CTA와 비벤덤을 형제 요소로 나란히 배치 — 어떤 화면 폭에서도 겹치지 않음 */
+  .cta-row { display: flex; align-items: flex-end; gap: 12px; }
+  .hero .bib { flex: 0 0 auto; height: 118px; width: auto; margin-bottom: -30px; opacity: .95;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,.4)); pointer-events: none; }
-  /* 모바일: 버튼 폭을 줄여 비벤덤이 버튼 옆에 나란히 서도록 */
-  @media (max-width: 560px) {
-    .cta-main { width: calc(100% - 100px); }
-    .hero .bib { height: 116px; right: -6px; bottom: -4px; }
-  }
-  @media (max-width: 360px) { .hero .bib { height: 100px; } }
+  @media (max-width: 360px) { .hero .bib { height: 98px; } }
 
   .count-row { display: flex; align-items: center; gap: 10px; margin: 18px 0 20px; flex-wrap: wrap; }
   .dday { background: var(--yellow); color: #14171C; font-weight: 900; font-size: 17px;
@@ -79,9 +76,10 @@
   .clock { font-size: 14px; font-weight: 700; color: var(--on-dark-muted); font-variant-numeric: tabular-nums; }
   .clock b { color: #fff; }
 
-  .cta-main { display: block; position: relative; z-index: 1; text-align: center; background: var(--yellow); color: #14171C;
+  .cta-main { display: block; flex: 1 1 auto; min-width: 0; max-width: 340px; text-align: center;
+    background: var(--yellow); color: #14171C;
     font-size: 18px; font-weight: 900; letter-spacing: -0.02em; padding: 15px;
-    border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.3); width: min(100%, 340px); }
+    border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
   .cta-main:active { transform: translateY(1px); }
 
   /* ── 섹션 공통 ── */
@@ -187,8 +185,10 @@
       <span class="dday" id="dday">D-15</span>
       <span class="clock" id="clock">8월 31일(월)까지</span>
     </div>
-    <a class="cta-main" href="#stores">가까운 매장 찾기</a>
-    <img class="bib" src="assets/bibendum.png" alt="">
+    <div class="cta-row">
+      <a class="cta-main" href="#stores">가까운 매장 찾기</a>
+      <img class="bib" src="assets/bibendum.png" alt="">
+    </div>
   </div>
 </header>
 
