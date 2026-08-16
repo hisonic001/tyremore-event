@@ -41,5 +41,5 @@ const STORES = [
   { region: "전라도", name: "순천점", tel: "010-9990-3330", place: "" },
   { region: "전라도", name: "용봉IC점", tel: "062-434-1472", place: "" },
   { region: "전라도", name: "전주덕진점", tel: "063-213-3033", place: "" },
-  { region: "전라도", name: "전주효자점", tel: "062-223-7473", place: "" },
+  { region: "전라도", name: "전주효자점", tel: "063-223-7473", place: "" },
 ];

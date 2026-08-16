@@ -66,7 +66,12 @@
   .hero .eligible b { color: #fff; border-bottom: 2px solid var(--yellow); padding-bottom: 1px; }
   .hero .bib { position: absolute; right: 4px; bottom: -6px; height: 118px; max-width: 34%; object-fit: contain; opacity: .95;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,.4)); pointer-events: none; }
-  @media (max-width: 420px) { .hero .bib { height: 92px; right: -6px; } }
+  /* 모바일: 버튼 폭을 줄여 비벤덤이 버튼 옆에 나란히 서도록 */
+  @media (max-width: 560px) {
+    .cta-main { width: calc(100% - 100px); }
+    .hero .bib { height: 116px; right: -6px; bottom: -4px; }
+  }
+  @media (max-width: 360px) { .hero .bib { height: 100px; } }
 
   .count-row { display: flex; align-items: center; gap: 10px; margin: 18px 0 20px; flex-wrap: wrap; }
   .dday { background: var(--yellow); color: #14171C; font-weight: 900; font-size: 17px;
@@ -317,7 +322,7 @@
 // ── 설정 ──────────────────────────────────────────────
 // GoatCounter(무료 방문 통계) 코드. https://www.goatcounter.com 가입 후
 // 사이트 코드를 아래에 넣으면 조회수·전화클릭·지도클릭이 집계됩니다. 비우면 통계 없이 동작.
-var GOATCOUNTER_CODE = "";
+var GOATCOUNTER_CODE = "hisonic001";
 var DEADLINE = new Date("2026-08-31T23:59:59+09:00");
 
 // ── 카운트다운 ────────────────────────────────────────
